@@ -5,7 +5,7 @@
     <objectAnimator
         android:duration="300"
         android:propertyName="pathData"
-        android:valueFrom="M64,32 L64,32 64,32 32,48 32,16Z"
-        android:valueTo="M64,0 L64,32 64,64 37,64 37,0Z"
+        android:valueFrom="M64,0 L64,32 64,64 37,64 37,0Z"
+        android:valueTo="M64,32 L64,32 64,32 32,48 32,16Z"
         android:valueType="pathType"/>
 </set>

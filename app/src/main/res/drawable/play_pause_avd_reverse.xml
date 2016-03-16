@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pause"
+    >
+    <target
+        android:name="part1"
+        android:animation="@anim/play_pause_morph_part1_reverse"
+        />
+    <target
+        android:name="part2"
+        android:animation="@anim/play_pause_morph_part2_reverse"
+        />
+
+</animated-vector>
