@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/pause"
+    android:drawable="@drawable/pause_play"
     >
     <target
         android:name="part1"
-        android:animation="@anim/play_pause_morph_part1_reverse"
+        android:animation="@anim/fade_in"
         />
     <target
         android:name="part2"
-        android:animation="@anim/play_pause_morph_part2_reverse"
+        android:animation="@anim/fade_in"
+        />
+    <target
+        android:name="part3"
+        android:animation="@anim/fade_out"
+        />
+    <target
+        android:name="part4"
+        android:animation="@anim/fade_out"
         />
 
 </animated-vector>

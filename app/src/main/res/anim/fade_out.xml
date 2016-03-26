@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="450"
+        android:propertyName="fillAlpha"
+        android:valueFrom="1f"
+        android:valueTo="0f"
+        />
+</set>
