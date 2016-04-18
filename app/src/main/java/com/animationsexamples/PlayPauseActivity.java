@@ -14,7 +14,6 @@ public class PlayPauseActivity extends AppCompatActivity {
 
     private boolean shouldReverse;
     private ImageView imageView;
-    private Button buttonToggle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,9 +24,8 @@ public class PlayPauseActivity extends AppCompatActivity {
         shouldReverse = false;
 
         imageView = (ImageView) findViewById(R.id.image);
-        buttonToggle = (Button) findViewById(R.id.button_toggle);
 
-        buttonToggle.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (shouldReverse) {

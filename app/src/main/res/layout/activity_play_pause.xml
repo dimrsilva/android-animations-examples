@@ -7,14 +7,8 @@
 
     <ImageView
         android:id="@+id/image"
-        app:srcCompat="@drawable/play_pause_avd"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        />
-    <Button
-        android:id="@+id/button_toggle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Toggle animation"
+        app:srcCompat="@drawable/play_pause_avd"
         />
 </LinearLayout>

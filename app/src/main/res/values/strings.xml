@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Animations Examples</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="play_alpha">Play with alpha</string>
 </resources>
