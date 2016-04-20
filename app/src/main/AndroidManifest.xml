@@ -14,9 +14,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PlayPauseActivity"/>
         <activity android:name=".ViewAnimationActivity"/>
+        <activity android:name=".ViewAnimationTranslationActivity"/>
         <activity android:name=".PropertyAnimationActivity"/>
+        <activity android:name=".PlayPauseActivity"/>
     </application>
 
 </manifest>

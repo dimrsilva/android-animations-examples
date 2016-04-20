@@ -12,6 +12,12 @@
         android:text="View animation"
         />
     <Button
+        android:id="@+id/button_view_animation_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View animation w/ translation"
+        />
+    <Button
         android:id="@+id/button_property_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
