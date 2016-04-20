@@ -6,16 +6,22 @@
     android:gravity="center_vertical"
     >
     <Button
+        android:id="@+id/button_view_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View animation"
+        />
+    <Button
+        android:id="@+id/button_property_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Property animation"
+        />
+    <Button
         android:id="@+id/button_play_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Play/Pause"
-        />
-    <Button
-        android:id="@+id/button_simple_rotate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Simple rotate"
         />
 
 </LinearLayout>

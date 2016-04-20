@@ -15,7 +15,8 @@
         </activity>
 
         <activity android:name=".PlayPauseActivity"/>
-        <activity android:name=".SimpleRotateActivity"/>
+        <activity android:name=".ViewAnimationActivity"/>
+        <activity android:name=".PropertyAnimationActivity"/>
     </application>
 
 </manifest>

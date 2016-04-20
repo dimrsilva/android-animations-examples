@@ -13,7 +13,7 @@ import android.widget.ImageView;
 /**
  * Created by andersonr on 17/04/16.
  */
-public class SimpleRotateActivity extends AppCompatActivity {
+public class ViewAnimationActivity extends AppCompatActivity {
     private ImageView imageView;
     private Button buttonPlay;
     private Button buttonPlayAlpha;
