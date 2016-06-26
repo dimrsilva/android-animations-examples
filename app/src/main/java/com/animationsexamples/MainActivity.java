@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setupOnClickListener(R.id.button_view_animation, ViewAnimationActivity.class);
         setupOnClickListener(R.id.button_view_animation_translation, ViewAnimationTranslationActivity.class);
         setupOnClickListener(R.id.button_property_animation, PropertyAnimationActivity.class);
+        setupOnClickListener(R.id.button_view_property_animator, ViewPropertyAnimatorActivity.class);
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
     }
 

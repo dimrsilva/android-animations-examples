@@ -24,6 +24,12 @@
         android:text="Property animation"
         />
     <Button
+        android:id="@+id/button_view_property_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Property Animator"
+        />
+    <Button
         android:id="@+id/button_play_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
