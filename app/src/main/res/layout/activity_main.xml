@@ -36,6 +36,12 @@
         android:text="Interpolators"
         />
     <Button
+        android:id="@+id/button_layout_transition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LayoutTransition"
+        />
+    <Button
         android:id="@+id/button_play_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
