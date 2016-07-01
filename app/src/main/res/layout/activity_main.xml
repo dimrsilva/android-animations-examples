@@ -30,6 +30,12 @@
         android:text="View Property Animator"
         />
     <Button
+        android:id="@+id/button_interpolator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interpolators"
+        />
+    <Button
         android:id="@+id/button_play_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

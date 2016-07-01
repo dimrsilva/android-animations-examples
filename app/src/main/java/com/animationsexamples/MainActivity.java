@@ -7,8 +7,6 @@ import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setupOnClickListener(R.id.button_view_animation_translation, ViewAnimationTranslationActivity.class);
         setupOnClickListener(R.id.button_property_animation, PropertyAnimationActivity.class);
         setupOnClickListener(R.id.button_view_property_animator, ViewPropertyAnimatorActivity.class);
+        setupOnClickListener(R.id.button_interpolator, InterpolatorsActivity.class);
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
     }
 

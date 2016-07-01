@@ -18,6 +18,7 @@
         <activity android:name=".ViewAnimationTranslationActivity"/>
         <activity android:name=".PropertyAnimationActivity"/>
         <activity android:name=".ViewPropertyAnimatorActivity"/>
+        <activity android:name=".InterpolatorsActivity"/>
         <activity android:name=".PlayPauseActivity"/>
     </application>
 
