@@ -6,4 +6,5 @@
     <string name="play_alpha">Play with alpha</string>
     <string name="click_me">Click me</string>
     <string name="button_clicked">Button clicked</string>
+    <string name="transition_button_scene">transition_button_scene</string>
 </resources>

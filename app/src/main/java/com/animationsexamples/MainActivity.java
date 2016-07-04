@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Scene;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
         setupOnClickListener(R.id.button_view_property_animator, ViewPropertyAnimatorActivity.class);
         setupOnClickListener(R.id.button_interpolator, InterpolatorsActivity.class);
         setupOnClickListener(R.id.button_layout_transition, LayoutTransitionActivity.class);
+        findViewById(R.id.button_scene_transition).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SceneTransitionActivity.class);
+                ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        MainActivity.this,
+                        findViewById(R.id.button_scene_transition),
+                        getString(R.string.transition_button_scene)
+                );
+                ActivityCompat.startActivity(MainActivity.this, intent, activityOptions.toBundle());
+            }
+        });
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
     }
 
@@ -29,9 +44,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, activityClass);
-                startActivity(intent);
+                startActivity(createIntent(activityClass));
             }
         });
+    }
+
+    private <T extends Activity> Intent createIntent(final Class<T> activityClass) {
+        return new Intent(this, activityClass);
     }
 }
