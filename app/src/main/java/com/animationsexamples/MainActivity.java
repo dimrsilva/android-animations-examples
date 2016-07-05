@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.startActivity(MainActivity.this, intent, activityOptions.toBundle());
             }
         });
+        setupOnClickListener(R.id.button_animated_vector_drawable, AnimatedVectorDrawableActivity.class);
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
     }
 

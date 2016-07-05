@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/balls_vector_drawable">
+    <target
+        android:animation="@animator/translate_dot1"
+        android:name="dot1" />
+    <target
+        android:animation="@animator/translate_dot2"
+        android:name="dot2" />
+    <target
+        android:animation="@animator/translate_dot3"
+        android:name="dot3" />
+    <target
+        android:animation="@animator/translate_dot4"
+        android:name="dot4" />
+    <target
+        android:animation="@animator/translate_dot5"
+        android:name="dot5" />
+
+</animated-vector>

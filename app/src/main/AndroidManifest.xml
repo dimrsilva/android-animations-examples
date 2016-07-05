@@ -21,6 +21,7 @@
         <activity android:name=".InterpolatorsActivity"/>
         <activity android:name=".LayoutTransitionActivity"/>
         <activity android:name=".SceneTransitionActivity"/>
+        <activity android:name=".AnimatedVectorDrawableActivity"/>
         <activity android:name=".PlayPauseActivity"/>
     </application>
 
