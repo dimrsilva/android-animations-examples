@@ -1,10 +1,16 @@
 package com.animationsexamples;
 
+import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.animation.ValueAnimator;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +24,7 @@ public class PropertyAnimationActivity extends AppCompatActivity {
     private Button buttonPlay;
     private Button buttonPause;
     private Button buttonStop;
+    private Button buttonAnimateButtons;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,17 +36,18 @@ public class PropertyAnimationActivity extends AppCompatActivity {
         buttonPlay = (Button) findViewById(R.id.button_play);
         buttonPause = (Button) findViewById(R.id.button_pause);
         buttonStop = (Button) findViewById(R.id.button_stop);
+        buttonAnimateButtons = (Button) findViewById(R.id.button_animate_buttons);
 
-        final AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.rotation);
-        set.setTarget(imageView);
+        final Animator animator = AnimatorInflater.loadAnimator(this, R.animator.rotation);
+        animator.setTarget(imageView);
 
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (set.isStarted() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    set.resume();
+                if (animator.isStarted() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    animator.resume();
                 } else {
-                    set.start();
+                    animator.start();
                 }
             }
         });
@@ -48,9 +56,9 @@ public class PropertyAnimationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    set.pause();
+                    animator.pause();
                 } else {
-                    set.cancel();
+                    animator.cancel();
                 }
             }
         });
@@ -58,7 +66,32 @@ public class PropertyAnimationActivity extends AppCompatActivity {
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                set.cancel();
+                animator.cancel();
+            }
+        });
+
+        final Animator animatorButtonPlay = ObjectAnimator.ofFloat(buttonPlay, View.ROTATION, 360);
+        final Animator animatorButtonPause = ObjectAnimator.ofFloat(buttonPause, View.TRANSLATION_Y, 40);
+        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 1);
+
+        final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int colorStart = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorAccent);
+                int colorEnd = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorPrimary);
+                buttonStop.setTextColor((Integer) argbEvaluator.evaluate(animation.getAnimatedFraction(), colorStart, colorEnd));
+            }
+        });
+
+        final AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.setDuration(1000);
+        animatorSet.play(animatorButtonPlay).with(animatorButtonPause).with(valueAnimator);
+
+        buttonAnimateButtons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animatorSet.start();
             }
         });
 
