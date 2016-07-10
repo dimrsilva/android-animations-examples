@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setupOnClickListener(R.id.button_view_property_animator, ViewPropertyAnimatorActivity.class);
         setupOnClickListener(R.id.button_interpolator, InterpolatorsActivity.class);
         setupOnClickListener(R.id.button_layout_transition, LayoutTransitionActivity.class);
+        setupOnClickListener(R.id.button_recycler_view, RecyclerViewAnimationActivity.class);
         findViewById(R.id.button_scene_transition).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
