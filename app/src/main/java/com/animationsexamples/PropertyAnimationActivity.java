@@ -12,11 +12,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Property;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 /**
  * Created by andersonr on 19/04/16.
@@ -74,14 +76,14 @@ public class PropertyAnimationActivity extends AppCompatActivity {
 
         final Animator animatorButtonPlay = ObjectAnimator.ofFloat(buttonPlay, View.ROTATION, 360);
         final Animator animatorButtonPause = ObjectAnimator.ofFloat(buttonPause, View.TRANSLATION_Y, 40);
-        final ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 1);
+        final int colorStart = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorAccent);
+        final int colorEnd = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorPrimary);
+        final ValueAnimator valueAnimator = ValueAnimator.ofInt(colorStart, colorEnd);
 
         final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                int colorStart = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorAccent);
-                int colorEnd = ContextCompat.getColor(PropertyAnimationActivity.this, R.color.colorPrimary);
                 buttonStop.setTextColor((Integer) argbEvaluator.evaluate(animation.getAnimatedFraction(), colorStart, colorEnd));
             }
         });
