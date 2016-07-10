@@ -13,6 +13,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -95,5 +97,26 @@ public class PropertyAnimationActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private Animator loadAnimator() {
+        if (MainActivity.LOAD_PROGRAMATICALLY) {
+            ObjectAnimator rotation = ObjectAnimator.ofFloat(null, View.ROTATION, 0, 360);
+            rotation.setInterpolator(new LinearInterpolator());
+            rotation.setRepeatCount(ObjectAnimator.INFINITE);
+            rotation.setDuration(1500);
+
+            ObjectAnimator alpha = ObjectAnimator.ofFloat(null, View.ALPHA, 1, 0);
+            alpha.setInterpolator(new AccelerateDecelerateInterpolator());
+            alpha.setRepeatCount(ObjectAnimator.INFINITE);
+            alpha.setRepeatMode(ObjectAnimator.REVERSE);
+            alpha.setDuration(500);
+
+            AnimatorSet animator = new AnimatorSet();
+            animator.play(rotation).with(alpha);
+            return animator;
+        } else {
+            return AnimatorInflater.loadAnimator(this, R.animator.rotation);
+        }
     }
 }
