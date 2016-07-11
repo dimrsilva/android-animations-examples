@@ -51,7 +51,6 @@
         android:id="@+id/button_scene_transition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:transitionName="@string/transition_button_scene"
         android:text="Scene Transition"
         />
     <Button
