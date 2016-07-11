@@ -48,10 +48,16 @@
         android:text="Recycler View"
         />
     <Button
+        android:id="@+id/button_simple_transition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple Transition"
+        />
+    <Button
         android:id="@+id/button_scene_transition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scene Transition"
+        android:text="Shared Element Transition"
         />
     <Button
         android:id="@+id/button_animated_vector_drawable"
