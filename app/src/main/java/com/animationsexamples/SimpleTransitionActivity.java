@@ -1,5 +1,6 @@
 package com.animationsexamples;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,14 +21,13 @@ public class SimpleTransitionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                overridePendingTransition(R.anim.left_in, R.anim.right_out);
             }
         });
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+    public void finish() {
+        super.finish();
         overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 }

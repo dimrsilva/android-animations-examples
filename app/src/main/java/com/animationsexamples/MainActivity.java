@@ -1,6 +1,7 @@
 package com.animationsexamples;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -31,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SimpleTransitionActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                    Bundle options = ActivityOptions.makeCustomAnimation(MainActivity.this, R.anim.right_in, R.anim.left_out).toBundle();
+                    startActivity(intent, options);
+                } else {
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.right_in, R.anim.left_out);
+                }
             }
         });
         findViewById(R.id.button_scene_transition).setOnClickListener(new View.OnClickListener() {

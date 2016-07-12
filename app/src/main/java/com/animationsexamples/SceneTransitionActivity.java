@@ -1,5 +1,6 @@
 package com.animationsexamples;
 
+import android.app.ActivityOptions;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -27,11 +28,5 @@ public class SceneTransitionActivity extends AppCompatActivity {
                 supportFinishAfterTransition();
             }
         });
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Transition transition = new ChangeBounds();
-            transition.setStartDelay(300);
-            getWindow().setSharedElementEnterTransition(transition);
-        }
     }
 }
