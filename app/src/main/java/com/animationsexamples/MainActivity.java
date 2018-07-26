@@ -32,13 +32,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SimpleTransitionActivity.class);
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    Bundle options = ActivityOptions.makeCustomAnimation(MainActivity.this, R.anim.right_in, R.anim.left_out).toBundle();
-                    startActivity(intent, options);
-                } else {
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.right_in, R.anim.left_out);
-                }
+                Bundle options = ActivityOptions.makeCustomAnimation(MainActivity.this, R.anim.right_in, R.anim.left_out).toBundle();
+                startActivity(intent, options);
             }
         });
         findViewById(R.id.button_scene_transition).setOnClickListener(new View.OnClickListener() {
@@ -55,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });
         setupOnClickListener(R.id.button_animated_vector_drawable, AnimatedVectorDrawableActivity.class);
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
+        setupOnClickListener(R.id.button_constraint_layout, ConstraintLayoutActivity.class);
     }
 
     private <T extends Activity> void setupOnClickListener(@IdRes int view, final Class<T> activityClass) {
