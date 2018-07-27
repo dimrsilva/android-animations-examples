@@ -1,6 +1,7 @@
 package com.animationsexamples;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -8,7 +9,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.transition.Scene;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +28,19 @@ public class MainActivity extends AppCompatActivity {
         setupOnClickListener(R.id.button_interpolator, InterpolatorsActivity.class);
         setupOnClickListener(R.id.button_layout_transition, LayoutTransitionActivity.class);
         setupOnClickListener(R.id.button_recycler_view, RecyclerViewAnimationActivity.class);
+        findViewById(R.id.button_simple_transition).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SimpleTransitionActivity.class);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                    Bundle options = ActivityOptions.makeCustomAnimation(MainActivity.this, R.anim.right_in, R.anim.left_out).toBundle();
+                    startActivity(intent, options);
+                } else {
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.right_in, R.anim.left_out);
+                }
+            }
+        });
         findViewById(R.id.button_scene_transition).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
