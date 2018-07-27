@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
         setupOnClickListener(R.id.button_animated_vector_drawable, AnimatedVectorDrawableActivity.class);
         setupOnClickListener(R.id.button_play_pause, PlayPauseActivity.class);
+        setupOnClickListener(R.id.button_motion_layout, MotionLayoutActivity.class);
     }
 
     private <T extends Activity> void setupOnClickListener(@IdRes int view, final Class<T> activityClass) {

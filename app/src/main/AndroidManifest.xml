@@ -24,6 +24,7 @@
         <activity android:name=".SceneTransitionActivity"/>
         <activity android:name=".AnimatedVectorDrawableActivity"/>
         <activity android:name=".PlayPauseActivity"/>
+        <activity android:name=".MotionLayoutActivity"/>
     </application>
 
 </manifest>
