@@ -1,5 +1,6 @@
 package com.animationsexamples;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -33,7 +34,9 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
         findViewById(R.id.image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TransitionManager.beginDelayedTransition(constraintLayout);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    TransitionManager.beginDelayedTransition(constraintLayout);
+                }
                 nextConstraintSet.applyTo(constraintLayout);
                 if (nextConstraintSet.equals(finalConstraintSet)) {
                     nextConstraintSet = initialConstraintSet;

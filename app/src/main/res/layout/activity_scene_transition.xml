@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -12,13 +13,20 @@
         android:text="Shared Element Transition"
         android:transitionName="@string/transition_button_scene" />
 
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Do nothing" />
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button_remove_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove margin" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Do nothing" />
+        <Button
+            android:id="@+id/button_add_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add margin" />
+    </LinearLayout>
 </LinearLayout>

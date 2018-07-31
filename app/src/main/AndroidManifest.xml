@@ -25,6 +25,8 @@
         <activity android:name=".SceneTransitionActivity"/>
         <activity android:name=".AnimatedVectorDrawableActivity"/>
         <activity android:name=".PlayPauseActivity"/>
+        <activity android:name=".MotionLayoutActivity"/>
+        <activity android:name=".SpringAnimationActivity"/>
         <activity android:name=".ConstraintLayoutActivity"/>
     </application>
 
