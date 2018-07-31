@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -13,12 +14,14 @@
         android:transitionName="@string/transition_button_scene" />
 
     <Button
+        android:id="@+id/button_remove_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do nothing" />
+        android:text="Remove margin" />
 
     <Button
+        android:id="@+id/button_add_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do nothing" />
+        android:text="Add margin" />
 </LinearLayout>
