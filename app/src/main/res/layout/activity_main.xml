@@ -1,81 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    >
-    <Button
-        android:id="@+id/button_view_animation"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View animation"
-        />
-    <Button
-        android:id="@+id/button_view_animation_translation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View animation w/ translation"
-        />
-    <Button
-        android:id="@+id/button_property_animation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Property animation"
-        />
-    <Button
-        android:id="@+id/button_view_property_animator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Property Animator"
-        />
-    <Button
-        android:id="@+id/button_interpolator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Interpolators"
-        />
-    <Button
-        android:id="@+id/button_layout_transition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Layout Transition"
-        />
-    <Button
-        android:id="@+id/button_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recycler View"
-        />
-    <Button
-        android:id="@+id/button_simple_transition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Simple Transition"
-        />
-    <Button
-        android:id="@+id/button_scene_transition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Shared Element Transition"
-        />
-    <Button
-        android:id="@+id/button_animated_vector_drawable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Animated Vector Drawable"
-        />
-    <Button
-        android:id="@+id/button_play_pause"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Play/Pause"
-        />
-    <Button
-        android:id="@+id/button_motion_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Motion Layout"
-        />
+        android:gravity="center_vertical"
+        >
+        <Button
+            android:id="@+id/button_view_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View animation"
+            />
+        <Button
+            android:id="@+id/button_view_animation_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View animation w/ translation"
+            />
+        <Button
+            android:id="@+id/button_property_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Property animation"
+            />
+        <Button
+            android:id="@+id/button_view_property_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Property Animator"
+            />
+        <Button
+            android:id="@+id/button_interpolator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interpolators"
+            />
+        <Button
+            android:id="@+id/button_layout_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Layout Transition"
+            />
+        <Button
+            android:id="@+id/button_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycler View"
+            />
+        <Button
+            android:id="@+id/button_simple_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple Transition"
+            />
+        <Button
+            android:id="@+id/button_scene_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Element Transition"
+            />
+        <Button
+            android:id="@+id/button_animated_vector_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animated Vector Drawable"
+            />
+        <Button
+            android:id="@+id/button_play_pause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play/Pause"
+            />
+        <Button
+            android:id="@+id/button_motion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion Layout"
+            />
+        <Button
+            android:id="@+id/button_spring_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spring Animation"
+            />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

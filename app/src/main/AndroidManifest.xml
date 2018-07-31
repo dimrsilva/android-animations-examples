@@ -26,6 +26,7 @@
         <activity android:name=".AnimatedVectorDrawableActivity"/>
         <activity android:name=".PlayPauseActivity"/>
         <activity android:name=".MotionLayoutActivity"/>
+        <activity android:name=".SpringAnimationActivity"/>
     </application>
 
 </manifest>
