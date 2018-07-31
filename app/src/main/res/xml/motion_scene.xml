@@ -5,11 +5,22 @@
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end"
-        motion:duration="300">
+        motion:interpolator="anticipate"
+        motion:duration="2000">
         <OnSwipe
             motion:touchAnchorId="@+id/image"
             motion:touchAnchorSide="right"
             motion:dragDirection="dragRight" />
+
+        <KeyFrameSet>
+            <KeyPosition
+                motion:target="@+id/image"
+                motion:framePosition="30"
+                motion:type="deltaRelative"
+                motion:percentX="0.7"
+                motion:percentY="0.1"
+                />
+        </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
